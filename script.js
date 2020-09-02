@@ -1,17 +1,17 @@
 $(document).ready(function () {
     $('#cards')
-      .append("<div id='card-1' class='card'></div>")
-      .append("<div id='card-2' class='card'></div>")
-      .append("<div id='card-3' class='card'></div>")
-      .append("<div id='card-4' class='card'></div>")
-      .append("<div id='card-5' class='card'></div>")
-      .append("<div id='card-6' class='card'></div>")
-      .append("<div id='card-7' class='card'></div>")
-      .append("<div id='card-8' class='card'></div>")
-      .append("<div id='card-9' class='card'></div>")
-      .append("<div id='card-10' class='card'></div>")
-      .append("<div id='card-11' class='card'></div>")
-      .append("<div id='card-12' class='card'></div>")
+      .append("<div id='card-1' class='card backimage'></div>")
+      .append("<div id='card-2' class='card backimage'></div>")
+      .append("<div id='card-3' class='card backimage'></div>")
+      .append("<div id='card-4' class='card backimage'></div>")
+      .append("<div id='card-5' class='card backimage'></div>")
+      .append("<div id='card-6' class='card backimage'></div>")
+      .append("<div id='card-7' class='card backimage'></div>")
+      .append("<div id='card-8' class='card backimage'></div>")
+      .append("<div id='card-9' class='card backimage'></div>")
+      .append("<div id='card-10' class='card backimage'></div>")
+      .append("<div id='card-11' class='card backimage'></div>")
+      .append("<div id='card-12' class='card backimage'></div>")
   
     $('.card').on('click', function (event) {
       $(event.target).toggleClass('clicked')
@@ -22,21 +22,22 @@ $(document).ready(function () {
     })
   })
 
-//   the above code adds 12 cards with an ID and changes them when clicked
+//   for loop
+
 
   const array = [
-    { name: 'panthers', image: 'panthers.jpg' },
-    { name: 'panthers', image: 'panthers.jpg' },
-    { name: 'saints', image: 'saints.jpg' },
-    { name: 'saints', image: 'saints.jpg' },
-    { name: 'bucs', image: 'bucs.jpg' },
-    { name: 'bucs', image: 'bucs.jpg' },
-    { name: 'falcons', image: 'falcons.jpg' },
-    { name: 'falcons', image: 'falcons.jpg' },
-    { name: 'packers', image: 'packers.jpg' },
-    { name: 'packers', image: 'packers.jpg' },
-    { name: 'vikings', image: 'vikings.jpg' },
-    { name: 'vikings', image: 'vikings.jpg' },
+    { name: 'panthers', image: 'panthers.jpg' , id:"card-1"},
+    { name: 'panthers', image: 'panthers.jpg' , id:"card-2"},
+    { name: 'saints', image: 'saints.jpg' , id:"card-3"},
+    { name: 'saints', image: 'saints.jpg' , id:"card-4" },
+    { name: 'bucs', image: 'bucs.jpg' , id:"card-5"},
+    { name: 'bucs', image: 'bucs.jpg' , id:"card-6"},
+    { name: 'falcons', image: 'falcons.jpg' , id:"card-7"},
+    { name: 'falcons', image: 'falcons.jpg' , id:"card-8"},
+    { name: 'packers', image: 'packers.jpg' , id:"card-9" },
+    { name: 'packers', image: 'packers.jpg' , id:"card-10"},
+    { name: 'vikings', image: 'vikings.jpg' , id:"card-11"},
+    { name: 'vikings', image: 'vikings.jpg' , id:"card-12"},
 ]
 
 // want to make this array correspond to the cards, 6 matching pairs and 12 total
