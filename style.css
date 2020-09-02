@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+
+.card {
+    height: 168px;
+    width: 120px;
+    background-color: blue;
+    /* ideally replacing background color with the shield jpg */
+    margin: 10px;
+  }
+  /* playing card pixels are 240x336, cut in half to fit pages */
+
+  .clicked {
+    background-color: red;
+  }
+

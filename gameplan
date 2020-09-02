@@ -1,0 +1,44 @@
+## data
+- when the game started
+- set of cards - array of objects, each object has a duplicate
+  - value/name -- these are used to match cards
+  - image
+example
+[
+  { name: 'octopus', image: 'octo.png' },
+  { name: 'octopus', image: 'octo.png' },
+  { name: 'hagfish', image: 'hagfish.png' },
+  { name: 'hagfish', image: 'hagfish.png' }
+]
+## when the page loads
+- randomize the cards
+  function shuffleArray (array) {
+    array = array.slice()
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
+    }
+    return array
+  }
+- display the cards
+  - for each card, create a div
+    - put an event listener for clicks on this div
+  - put each card on the page
+- listen for clicks on the cards
+## when a card is clicked
+- if the timer has not been started, start the timer
+- check how many unmatched cards are face-up, if 2 or more stop
+- display its image
+- if another card is clicked
+  - check to see if the two cards' values match
+  - if the two cards match
+    - alert the user
+    - remove/disable the cards
+    - check if there are any unmatched cards left
+      - if no, stop the timer, game over
+  - if the two cards don't match
+    - flip the unmatched cards face-down
+## every second
+- display the timer
